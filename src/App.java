@@ -1,15 +1,25 @@
-import controller.CarController;
+import controllers.CarController;
 import models.Car;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-    }
 
-    CarController contrller = new CarController();
-    Car[] carros = makeCarsList();
-    for(Car[] car: carros){
-        System.out.println();
+        CarController controller = new CarController();
+        Car[] carros = makeCarsList();
+        for (Car car : carros) {
+            System.out.println(car);
+        }
+        System.out.println("////////////////////////////////");
+        controller.sortByName(carros);
+        for (Car car : carros) {
+            System.out.println(car);
+        }
+        System.out.println("////////////////////////////////");
+        controller.sortByYear(carros);
+        for (Car car : carros) {
+            System.out.println(car);
+        }
+
     }
 
     public static Car[] makeCarsList() {
