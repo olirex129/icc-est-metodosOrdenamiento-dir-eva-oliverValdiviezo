@@ -1,8 +1,15 @@
+import controller.CarController;
 import models.Car;
 
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
+    }
+
+    CarController contrller = new CarController();
+    Car[] carros = makeCarsList();
+    for(Car[] car: carros){
+        System.out.println();
     }
 
     public static Car[] makeCarsList() {
